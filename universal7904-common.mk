@@ -2,6 +2,9 @@
 PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/dynamic-partitions/flash_super_dummy.sh:install/bin/flash_super_dummy.sh
+
 # Call proprietary blob setup
 $(call inherit-product, vendor/samsung/universal7904-common/universal7904-common-vendor.mk)
 
