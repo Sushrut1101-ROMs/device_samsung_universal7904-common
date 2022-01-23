@@ -46,7 +46,10 @@ TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
+BOARD_MKBOOTIMG_ARGS := \
+	--kernel_offset 0x00008000 \
+	--ramdisk_offset 0x01000000 \
+	--tags_offset 0x00000100
 TARGET_KERNEL_SOURCE := kernel/samsung/universal7904
 TARGET_KERNEL_CLANG_COMPILE := true
 
@@ -83,7 +86,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Sepolicy
-include device/lineage/sepolicy/exynos/sepolicy.mk
+include device/evolution/sepolicy/exynos/sepolicy.mk
 include device/samsung_slsi/sepolicy/sepolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 

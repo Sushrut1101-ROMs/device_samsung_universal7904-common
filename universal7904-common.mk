@@ -4,6 +4,11 @@ $(call inherit-product, vendor/samsung/universal7904-common/universal7904-common
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
+# Evolution X
+TARGET_GAPPS_ARCH := arm64
+TARGET_INCLUDE_STORE_ARCODE := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+
 # Audio
 TARGET_EXCLUDES_AUDIOFX := true
 
@@ -137,7 +142,7 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-evo
 
 # RRO (Runtime Resource Overlay)
 PRODUCT_ENFORCE_RRO_TARGETS += *
