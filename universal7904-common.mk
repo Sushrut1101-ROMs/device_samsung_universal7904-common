@@ -1,3 +1,7 @@
+# Dynamic Partitions
+PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 # Call proprietary blob setup
 $(call inherit-product, vendor/samsung/universal7904-common/universal7904-common-vendor.mk)
 
